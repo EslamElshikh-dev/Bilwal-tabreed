@@ -2,6 +2,7 @@ const phoneDisplay = "0563837128";
 const phoneHref = "tel:+966563837128";
 const whatsappHref =
   "https://wa.me/966563837128?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%8A%D9%84%D8%A7%D9%88%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%A8%D8%B1%D9%8A%D8%AF%20%D9%88%D8%AA%D9%83%D9%8A%D9%8A%D9%81%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6";
+const siteUrl = "https://bilwal-tabreed.vercel.app";
 
 const services = [
   {
@@ -170,6 +171,8 @@ const schema = {
   "@graph": [
     {
       "@type": "HVACBusiness",
+      "@id": `${siteUrl}/#business`,
+      url: siteUrl,
       name: "بيلاوال لخدمات التبريد والتكييف",
       description:
         "خدمة إصلاح وصيانة وتنظيف وتركيب مكيفات الهواء في نطاق مدينة الرياض.",
@@ -202,6 +205,29 @@ const schema = {
             areaServed: "الرياض",
           },
         })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "بيلاوال لخدمات التبريد والتكييف",
+      url: siteUrl,
+      inLanguage: "ar-SA",
+      publisher: { "@id": `${siteUrl}/#business` },
+      creator: {
+        "@type": "Person",
+        "@id": "https://www.eslam-elshikh.com/#person",
+        name: "إسلام الشيخ",
+        alternateName: [
+          "المهندس إسلام الشيخ",
+          "المهندس اسلام الشيخ",
+          "اسلام الشيخ",
+          "إسلام الشيخ | Eslam Elshikh",
+          "Eslam Elshikh",
+          "Islam Elshikh",
+          "Eslam El Sheikh",
+        ],
+        url: "https://www.eslam-elshikh.com/",
       },
     },
     {
@@ -848,7 +874,7 @@ export default function Home() {
             <p>
               تم التصميم والتطوير بواسطة{" "}
               <a
-                href="https://eslam-elshikh.com/"
+                href="https://www.eslam-elshikh.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -856,29 +882,16 @@ export default function Home() {
               </a>
             </p>
             <p lang="en" dir="ltr">
-              Developed By{" "}
+              Designed &amp; developed by{" "}
               <a
-                href="https://eslam-elshikh.com/"
+                href="https://www.eslam-elshikh.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Eng. Eslam Elshikh
               </a>
             </p>
-            <small lang="en" dir="ltr">
-              Cybersecurity Engineer | Web Developer | Google Product Expert
-            </small>
           </div>
-          <a
-            className="developer-card__whatsapp"
-            href="https://wa.me/966547194788"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="تواصل مع المطور عبر واتساب"
-          >
-            <WhatsAppIcon />
-            <span>تواصل مع المطور</span>
-          </a>
         </div>
 
         <div className="footer__bottom">
