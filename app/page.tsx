@@ -169,6 +169,18 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      name: "بيلاوال لخدمات التبريد والتكييف",
+      inLanguage: "ar-SA",
+      creator: {
+        "@type": "Person",
+        "@id": "https://www.eslam-elshikh.com/#person",
+        name: "إسلام الشيخ",
+        alternateName: ["المهندس إسلام الشيخ", "Eslam Elshikh"],
+        url: "https://www.eslam-elshikh.com/",
+      },
+    },
+    {
       "@type": "HVACBusiness",
       name: "بيلاوال لخدمات التبريد والتكييف",
       description:
@@ -848,7 +860,7 @@ export default function Home() {
             <p>
               تم التصميم والتطوير بواسطة{" "}
               <a
-                href="https://eslam-elshikh.com/"
+                href="https://www.eslam-elshikh.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -858,27 +870,14 @@ export default function Home() {
             <p lang="en" dir="ltr">
               Developed By{" "}
               <a
-                href="https://eslam-elshikh.com/"
+                href="https://www.eslam-elshikh.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Eng. Eslam Elshikh
               </a>
             </p>
-            <small lang="en" dir="ltr">
-              Cybersecurity Engineer | Web Developer | Google Product Expert
-            </small>
           </div>
-          <a
-            className="developer-card__whatsapp"
-            href="https://wa.me/966547194788"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="تواصل مع المطور عبر واتساب"
-          >
-            <WhatsAppIcon />
-            <span>تواصل مع المطور</span>
-          </a>
         </div>
 
         <div className="footer__bottom">
